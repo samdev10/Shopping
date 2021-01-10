@@ -27,6 +27,6 @@ export class AppComponent {
   ngOnInit() {}
 
   cart() {
-    return this.appRequest('POST', `${environment.serverUrl}/user`);
+    return this.appRequest('POST', `${environment.apiUrl}/user`);
   }
 }
