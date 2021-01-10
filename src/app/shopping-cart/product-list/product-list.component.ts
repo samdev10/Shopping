@@ -13,7 +13,6 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe((response) => {
-      console.log(response);
       response.data.forEach((product) => {
         this.productList.push(
           new Product(product.id, product.title, product.summary, product.price)
