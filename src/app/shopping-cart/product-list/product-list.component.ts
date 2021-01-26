@@ -17,8 +17,10 @@ export class ProductListComponent implements OnInit {
         new Product(
           product.id,
           product.name,
-          product.description,
-          product.price
+          product.title,
+          product.price,
+          product.imageUrl,
+          product.description
         )
       );
     });
@@ -26,14 +28,78 @@ export class ProductListComponent implements OnInit {
 
   getMockResponse(): Product[] {
     return [
-      new Product(1, 'Java Programmer', 'Core Java', 20),
-      new Product(2, 'Javascript', 'Javascript', 30),
-      new Product(3, 'Design Patterns', 'Design Patterns', 40),
-      new Product(4, 'React Js', 'React Js', 50),
-      new Product(5, 'Angular', 'Angular', 60),
-      new Product(6, 'Spring Framework', 'Spring Framework', 70),
-      new Product(7, 'Docker', 'Docker', 20),
-      new Product(8, 'Mysql', 'Mysql', 20),
+      new Product(
+        1,
+        'Book',
+        'Harry Potter and the Half-Blood Prince',
+        21,
+        '../../assets/images/book2.jpg',
+        'Harry Potter and the Half-Blood Prince | Aurthor - J.K. Rowling | Rating 4.57 | Publisher - Scholastic Inc.'
+      ),
+      new Product(
+        1,
+        'Book',
+        'Harry Potter and the Chamber of Secrets',
+        14,
+        '../../assets/images/book3.jpg',
+        'Harry Potter and the Chamber of Secret | Aurthor - J.K. Rowling | Rating 4.42 | Publisher - Scholastic Inc.'
+      ),
+      new Product(
+        1,
+        'Book',
+        'The Ultimate Hitchhikers Guide: Five Complete Novels and One Story',
+        25,
+        '../../assets/images/book2.jpg',
+        'The Ultimate Hitchhikers Guide: Five Complete Novels and One Story | Aurthor - Douglas Adams | Rating 4.38 | Publisher - Gramercy Books'
+      ),
+      new Product(
+        1,
+        'Book',
+        "Bryson's Dictionary of Troublesome Words: A Writer's Guide to Getting It Right",
+        12,
+        '../../assets/images/book3.jpg',
+        "Bryson's Dictionary of Troublesome Words: A Writer's Guide to Getting It Right | Aurthor - Bill Bryson | Rating 4.21 | Publisher - Broadway Books"
+      ),
+      new Product(
+        1,
+        'Book',
+        'The Lost Continent: Travels in Small Town America',
+        29,
+        '../../assets/images/book1.jpg',
+        'The Lost Continent: Travels in Small Town America | Aurthor - Bill Bryson | Rating 3.83 | Publisher - William Morrow Paperbacks'
+      ),
+      new Product(
+        1,
+        'Book',
+        'The Changeling Sea',
+        20,
+        '../../assets/images/book2.jpg',
+        'The Changeling Sea | Aurthor - Patricia A. McKillip | Rating 4.06 | Publisher - FireBird'
+      ),
+      new Product(
+        1,
+        'Book',
+        'Annals of the Former World',
+        16,
+        '../../assets/images/book3.jpg',
+        'Annals of the Former World | Aurthor - John McPhee | Rating 4.34 | Publisher - Farrar  Straus and Giroux'
+      ),
+      new Product(
+        1,
+        'Book',
+        'The Lord of the Rings: The Art of the Fellowship of the Ring',
+        30,
+        '../../assets/images/book1.jpg',
+        'The Lord of the Rings: The Art of the Fellowship of the Ring | Aurthor - Gary Russell | Rating 4.59 | Publisher - Houghton Mifflin Harcourt'
+      ),
+      new Product(
+        1,
+        'Book',
+        'The Power of One',
+        24,
+        '../../assets/images/book1.jpg',
+        'The Power of One | Aurthor - Bryce Courtenay | Rating 4.35 | Publisher - Ballantine Books'
+      ),
     ];
   }
 }

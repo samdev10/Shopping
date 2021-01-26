@@ -9,6 +9,7 @@ import { MessengerService } from '../../../services/messenger.service';
 })
 export class ProductItemComponent implements OnInit {
   @Input() productItem: Product;
+  dispayItemDetails = false;
 
   constructor(private messengerService: MessengerService) {}
 
@@ -16,5 +17,9 @@ export class ProductItemComponent implements OnInit {
 
   handleAddToCart() {
     this.messengerService.sendMessage(this.productItem);
+  }
+
+  handleViewDetails() {
+    this.dispayItemDetails = !this.dispayItemDetails;
   }
 }

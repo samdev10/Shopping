@@ -2,13 +2,22 @@
   <img
     class="bd-placeholder-img card-img-top"
     width="100%"
-    height="225"
+    height="275"
     [src]="productItem.imageUrl"
   />
 
   <div class="card-body">
-    <p class="card-text">{{ productItem.description }}</p>
+    <p class="card-text">
+      {{
+        dispayItemDetails
+          ? productItem.title
+          : (productItem.title | slice: 0:43)
+      }}
+    </p>
     <strong>{{ productItem.price | currency: "USD" }}</strong>
+    <p *ngIf="dispayItemDetails" class="card-text">
+      {{ productItem.description }}
+    </p>
     <div class="d-flex justify-content-between align-items-center">
       <div class="btn-group">
         <button
@@ -21,6 +30,7 @@
         <button
           type="button"
           class="btn btn-sm btn-outline-secondary ml-2 product-btn"
+          (click)="handleViewDetails()"
         >
           View details
         </button>
