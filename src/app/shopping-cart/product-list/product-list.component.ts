@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
+import { PriceFilterService } from 'src/app/services/price-filter.service';
 import { ProductService } from '../../services/product.service';
 
 @Component({
@@ -9,21 +10,32 @@ import { ProductService } from '../../services/product.service';
 })
 export class ProductListComponent implements OnInit {
   productList: Product[] = [];
-  constructor(private productService: ProductService) {}
+  priceRange: any = { fromPrice: 0, toPrice: 0 };
+  constructor(
+    private productService: ProductService,
+    private priceFilterService: PriceFilterService
+  ) {}
 
   ngOnInit(): void {
-    this.getMockResponse().forEach((product) => {
-      this.productList.push(
-        new Product(
-          product.id,
-          product.name,
-          product.title,
-          product.price,
-          product.imageUrl,
-          product.description
-        )
-      );
+    this.priceFilterService.getMessage().subscribe((priceRange: any) => {
+      this.priceRange = priceRange;
+      this.productList = this.getMockResponse();
+      this.filterByPriceRange(priceRange);
     });
+    this.productList = this.getMockResponse();
+  }
+
+  private filterByPriceRange(priceRange: any) {
+    if (priceRange.fromPrice && priceRange.fromPrice >= 0) {
+      this.productList = this.productList.filter(
+        (product) => product.price > this.priceRange.fromPrice
+      );
+    }
+    if (priceRange.toPrice && priceRange.toPrice >= 0) {
+      this.productList = this.productList.filter(
+        (product) => product.price < this.priceRange.toPrice
+      );
+    }
   }
 
   getMockResponse(): Product[] {
