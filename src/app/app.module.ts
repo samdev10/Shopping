@@ -11,14 +11,11 @@ import { SharedComponent } from './shared/shared.component';
 import { CartItemComponent } from './shopping-cart/cart/cart-item/cart-item.component';
 import { CartComponent } from './shopping-cart/cart/cart.component';
 import { FiltersComponent } from './shopping-cart/filters/filters.component';
+import { ProductItemComponent } from './shopping-cart/product-list/product-item/product-item.component';
 import { ProductListComponent } from './shopping-cart/product-list/product-list.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { ProductItemComponent } from './shopping-cart/product-list/product-item/product-item.component';
 
-const routes: Routes = [
-  { path: 'home', component: AppComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-];
+const routes: Routes = [];
 @NgModule({
   declarations: [
     AppComponent,
