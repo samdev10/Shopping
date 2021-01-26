@@ -31,7 +31,7 @@ export class CartComponent implements OnInit {
     }
     if (!productExists) {
       this.cartItems.push(
-        new CartItem(product.id, product.name, 1, product.price)
+        new CartItem(product.id, product.title, 1, product.price)
       );
     }
 

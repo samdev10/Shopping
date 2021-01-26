@@ -49,7 +49,7 @@ export class ProductListComponent implements OnInit {
         'Harry Potter and the Half-Blood Prince | Aurthor - J.K. Rowling | Rating 4.57 | Publisher - Scholastic Inc.'
       ),
       new Product(
-        1,
+        2,
         'Book',
         'Harry Potter and the Chamber of Secrets',
         14,
@@ -57,7 +57,7 @@ export class ProductListComponent implements OnInit {
         'Harry Potter and the Chamber of Secret | Aurthor - J.K. Rowling | Rating 4.42 | Publisher - Scholastic Inc.'
       ),
       new Product(
-        1,
+        3,
         'Book',
         'The Ultimate Hitchhikers Guide: Five Complete Novels and One Story',
         25,
@@ -65,7 +65,7 @@ export class ProductListComponent implements OnInit {
         'The Ultimate Hitchhikers Guide: Five Complete Novels and One Story | Aurthor - Douglas Adams | Rating 4.38 | Publisher - Gramercy Books'
       ),
       new Product(
-        1,
+        4,
         'Book',
         "Bryson's Dictionary of Troublesome Words: A Writer's Guide to Getting It Right",
         12,
@@ -73,7 +73,7 @@ export class ProductListComponent implements OnInit {
         "Bryson's Dictionary of Troublesome Words: A Writer's Guide to Getting It Right | Aurthor - Bill Bryson | Rating 4.21 | Publisher - Broadway Books"
       ),
       new Product(
-        1,
+        5,
         'Book',
         'The Lost Continent: Travels in Small Town America',
         29,
@@ -81,7 +81,7 @@ export class ProductListComponent implements OnInit {
         'The Lost Continent: Travels in Small Town America | Aurthor - Bill Bryson | Rating 3.83 | Publisher - William Morrow Paperbacks'
       ),
       new Product(
-        1,
+        6,
         'Book',
         'The Changeling Sea',
         20,
@@ -89,7 +89,7 @@ export class ProductListComponent implements OnInit {
         'The Changeling Sea | Aurthor - Patricia A. McKillip | Rating 4.06 | Publisher - FireBird'
       ),
       new Product(
-        1,
+        7,
         'Book',
         'Annals of the Former World',
         16,
@@ -97,7 +97,7 @@ export class ProductListComponent implements OnInit {
         'Annals of the Former World | Aurthor - John McPhee | Rating 4.34 | Publisher - Farrar  Straus and Giroux'
       ),
       new Product(
-        1,
+        8,
         'Book',
         'The Lord of the Rings: The Art of the Fellowship of the Ring',
         30,
@@ -105,7 +105,7 @@ export class ProductListComponent implements OnInit {
         'The Lord of the Rings: The Art of the Fellowship of the Ring | Aurthor - Gary Russell | Rating 4.59 | Publisher - Houghton Mifflin Harcourt'
       ),
       new Product(
-        1,
+        9,
         'Book',
         'The Power of One',
         24,
